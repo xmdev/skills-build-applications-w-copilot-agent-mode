@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'octofit_tracker',
     'rest_framework',
     'djongo',
     'corsheaders',
+    'octofit_tracker',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +89,10 @@ DATABASES = {
         }
     }
 }
+
+# Point to custom user model
+AUTH_USER_MODEL = 'octofit_tracker.User'
+
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
